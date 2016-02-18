@@ -78,6 +78,9 @@ autocmd FileType text setlocal textwidth=78
 
 " CTRL-W commands see Q_wi
 
+" key-notation key-codes keycodes <-- :h these to get key notations
+
+
 " file usr_06.txt to change colorscheme
 "	:colorscheme evening
 ""evening" is the name of the color scheme.  There are several others you might
