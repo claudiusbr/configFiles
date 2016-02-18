@@ -1,6 +1,21 @@
 " set ~ as an operator
 set top
 
+" Disable arrow keys
+inoremap  <Up>     <NOP>
+inoremap  <Down>   <NOP>
+inoremap  <Left>   <NOP>
+inoremap  <Right>  <NOP>
+noremap   <Up>     <NOP>
+noremap   <Down>   <NOP>
+noremap   <Left>   <NOP>
+noremap   <Right>  <NOP>
+
+" Disable backups
+set nobackup
+set nowb
+set noswapfile
+
 " set backupdir to Home-backup, CurrentDir-backup, or /tmp
 set backupdir=/tmp,~/"
 
@@ -105,7 +120,8 @@ autocmd FileType text setlocal textwidth=78
 " from within vim, use :[vertical ]diffsp[lit] [file_to_compare]
 " use 'zo' and 'zc' to open folds
 
-" ':tab split' to split the window in tabs, and 'gt' to navigate between tabs
+" ':tab split' to split the window in tabs, and '[i]gt' to navigate between tabs
+"	or to go to tab at position i
 " 	the above will split current file. use :tabedit [filename | #[N]] (where
 " 	N is the buffer number) for diff
 " 	file. For more  information see :h tab-page
