@@ -106,7 +106,8 @@ autocmd FileType text setlocal textwidth=78
 " use 'zo' and 'zc' to open folds
 
 " ':tab split' to split the window in tabs, and 'gt' to navigate between tabs
-" 	the above will split current file. use :tabedit [filename] for diff
+" 	the above will split current file. use :tabedit [filename | #[N]] (where
+" 	N is the buffer number) for diff
 " 	file. For more  information see :h tab-page
 " :buffers shortcut is :ls
 " :bd (buffer delete) - deletes buffer from list [%bd for all buffers]
