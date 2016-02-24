@@ -86,6 +86,8 @@ autocmd FileType text setlocal textwidth=78
 
 " key-notation key-codes keycodes <-- :h these to get key notations
 
+" the ^M windows character is equivalent to '\r', so if ever getting a file
+" which includes ^M, remove them by using :%s/\r//g[c]
 
 " file usr_06.txt to change colorscheme
 "	:colorscheme evening
