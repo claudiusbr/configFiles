@@ -1,5 +1,11 @@
+" use the man plugin to be able to see man pages in vim
+runtime! ftplugin/man.vim
+
 " set ~ as an operator
 set top
+
+" add title to top of file
+set title
 
 " Disable arrow keys
 inoremap  <Up>     <NOP>
@@ -75,19 +81,33 @@ autocmd FileType text setlocal textwidth=78
 
 "---------------------------------------------------------------------------------------
 
-" Bookmark for VIM Manuals: currently at usr_11.txt line 286 
+" Bookmark for VIM Manuals: currently at usr_20.txt line 146
 
 " to insert text at the beginning of every line in a block, do ctrl-v, select block,
 " then do "I{string}<Esc>", with {string} being the text you want to enter
+
+" use g ctrl-g to count all words in a text
 
 " J joins lines selected by ctrl-v
 
 " CTRL-W commands see Q_wi
 
+" for command line commands, go to usr_20.txt 
+
 " key-notation key-codes keycodes <-- :h these to get key notations
 
+" vim has its own grep. use :grep [word] *.java to find all occurences of 
+" [word] in the currently open files
+" use :cnext, :cprev and :clist to browse through the occurences found
+
+
+" more about this on usr_12.txt
 " the ^M windows character is equivalent to '\r', so if ever getting a file
 " which includes ^M, remove them by using :%s/\r//g[c]
+" 
+" in order to match the beginning of a word when searching, prepend '\<'
+" to the word. e.g.: to avoid %s/four/4/g making thirtyfour into thirty4,
+" use %s/\<four/4/g. to match the end of a word, append '\>'
 
 " file usr_06.txt to change colorscheme
 "	:colorscheme evening
