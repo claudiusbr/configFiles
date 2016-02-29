@@ -72,10 +72,9 @@ set linebreak
 autocmd FileType text setlocal textwidth=78
 
 " vimrc comment macro
-:map <F2> 0i"<Esc>j
+let @c='0i"j'
+let @b='A {}O	'
 
-" uncomment to display all characters
-"set list
 
 
 
