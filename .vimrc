@@ -1,6 +1,12 @@
 " use the man plugin to be able to see man pages in vim
 runtime! ftplugin/man.vim
 
+" set colorscheme
+colorscheme evening
+
+" set the cursor line under the cursor
+set cursorline
+
 " set ~ as an operator
 set top
 
@@ -28,7 +34,7 @@ set showmode
 " set autoindent
 set autoindent
 
-" In many terminal emulators the mouse works just fine, thus enable it.
+" enable mouse
 if has('mouse')
   set mouse=a
 endif
@@ -37,8 +43,7 @@ set history=50		" keep 50 lines of command line history
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
+" Use Vim settings, rather than Vi's 
 set nocompatible
 
 " allow backspacing over everything in insert mode
@@ -68,12 +73,12 @@ set clipboard=unnamed
 "set linebreak
 set linebreak
 
-" set textwidth
+" set textwidth for text files
 autocmd FileType text setlocal textwidth=78
 
-" vimrc comment macro
-let @c='0i"j'
-let @b='A {}O	'
+" macros
+let @c='0i"j'  " comment block line in vimrc
+let @b='A {}O	'   " insert curly bracket pair
 
 
 
