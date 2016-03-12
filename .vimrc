@@ -77,7 +77,7 @@ set linebreak
 autocmd FileType text setlocal textwidth=78
 
 " macros
-let @c='0i"j'  " comment block line in vimrc
+let @c='0i" j'  " comment block line in vimrc
 let @b='A {}O	'   " insert curly bracket pair
 
 
@@ -238,3 +238,6 @@ let @b='A {}O	'   " insert curly bracket pair
 " For remarks about encryption and the swap file, see |:recover-crypt|.
 
 " start vim with vim -r [file] to recover [file]
+
+" to type special characters in insert mode, use ctrl+k+[digraph for special character]
+" see :digraphs for a chart of all special characters
