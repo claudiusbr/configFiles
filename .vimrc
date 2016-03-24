@@ -241,3 +241,5 @@ let @b='A {}O	'   " insert curly bracket pair
 
 " to type special characters in insert mode, use ctrl+k+[digraph for special character]
 " see :digraphs for a chart of all special characters
+
+" to scroll [count] lines down, use ctrl-e, up is ctrl-y
