@@ -103,7 +103,8 @@ let @b='A {}O	'   " insert curly bracket pair
 " use f/F[char] to position the cursor behind the first [char] to the
 " right/left of the current position;
 "
-" use ; to repeat the last f or F
+" use ; to repeat the last f or F, or ',' (comma) to repeat it in the opposite
+" direction;
 
 " vim has its own grep. use :grep [word] *.java to find all occurences of 
 " [word] in the currently open files
