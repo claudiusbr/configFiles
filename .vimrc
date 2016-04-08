@@ -95,7 +95,7 @@ let @b='A {}O	'   " insert curly bracket pair
 " to insert text at the beginning of every line in a block, do ctrl-v, select block,
 " then do "I{string}<Esc>", with {string} being the text you want to enter
 
-" use g ctrl-g to count all words in a text
+" use 'g ctrl-g' to count all words in a text
 
 " J joins lines selected by ctrl-v
 
