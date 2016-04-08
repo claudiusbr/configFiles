@@ -76,6 +76,11 @@ set linebreak
 " set textwidth for text files
 autocmd FileType text setlocal textwidth=78
 
+" set scrolloff to make sure cursor stays more or less
+" close to the middle of the screen
+set scrolloff=999
+
+
 " macros
 let @c='0i" j'  " comment block line in vimrc
 let @b='A {}O	'   " insert curly bracket pair
