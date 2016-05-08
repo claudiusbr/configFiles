@@ -253,3 +253,5 @@ let @b='A {}O	'   " insert curly bracket pair
 " see :digraphs for a chart of all special characters
 
 " to scroll [count] lines down, use ctrl-e, up is ctrl-y
+
+" to auto indent, use >[move]. >> is just the shortcut for indenting a whole line.
