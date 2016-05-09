@@ -110,6 +110,9 @@ let @b='A {}O	'   " insert curly bracket pair
 " use ; to repeat the last f or F, or ',' (comma) to repeat it in the opposite
 " direction;
 
+" to repeat the last change (any change), use '.'
+" this should repeant any change including the count
+
 " vim has its own grep. use :grep [word] *.java to find all occurences of 
 " [word] in the currently open files
 " use :cnext, :cprev and :clist to browse through the occurences found
