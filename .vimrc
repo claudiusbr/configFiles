@@ -219,7 +219,9 @@ let @b='A {}O	'   " insert curly bracket pair
 "
 " :[range]y[ank] [x]	Yank [range] lines [into register x]. Yanking to the
 "			\"* or "+ registers is possible only when the
-"			|+clipboard| feature is included.
+"			|+clipboard| feature is included. To check if this
+"			has been enabled on your compilation, check vim --version
+			
 " 1. Unnamed register \""	
 " Vim fills this register with text deleted with the \"d", \"c", \"s", \"x" commands
 " or copied with the yank \"y" command, regardless of whether or not a specific
