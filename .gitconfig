@@ -1,0 +1,14 @@
+[user]
+	email = claudiusbr@users.noreply.github.com
+	name = claudiusbr
+
+[credential "https://github.com"]
+	username = claudiusbr
+
+[color]
+    ui = true
+
+[color "status"]
+    added = green bold
+    changed = yellow bold
+    untracked = red bold
