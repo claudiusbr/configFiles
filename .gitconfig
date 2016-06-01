@@ -2,9 +2,6 @@
 	email = claudiusbr@users.noreply.github.com
 	name = claudiusbr
 
-[credential "https://github.com"]
-	username = claudiusbr
-
 [color]
     ui = true
 
