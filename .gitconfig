@@ -11,3 +11,5 @@
     untracked = red bold
 [core]
 	editor = vim
+[push]
+	default = simple
