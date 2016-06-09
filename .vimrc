@@ -81,5 +81,13 @@ autocmd FileType text setlocal textwidth=78
 " set scrolloff=999
 
 " macros
-let @c='0i" j'  " comment block line in vimrc
-let @b='A {}O	'   " insert curly bracket pair
+	" comment block line in vimrc
+	let @c='0i" j'	
+
+	" insert pair of curly brackets
+	let @b='A {}O	'	
+
+	" close an opening html tag. Run the macro on a line containing a
+	" single html opeining tag. It will copy the tag, close it and leave
+	" it open for editing;
+	let @h='yyp^a/ko	'	
