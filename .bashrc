@@ -1,5 +1,8 @@
 # User dependent .bashrc file
 
+# command line like vim:
+set -o vi
+
 # If not running interactively, don't do anything
 [[ "$-" != *i* ]] && return
 
