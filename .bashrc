@@ -82,3 +82,7 @@ cd_func ()
 }
 
 alias cd=cd_func
+
+
+## make default file permissions 644
+umask 644
