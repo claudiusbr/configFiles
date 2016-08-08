@@ -14,8 +14,8 @@ set -o vi
 # \rm will call the real rm not the alias.
 #
 # Default to human readable figures
-# alias df='df -h'
-# alias du='du -h'
+alias df='df -h'
+alias du='du -h'
 #
 # Misc :)
  alias grep='grep --color'                     # show differences in colour
