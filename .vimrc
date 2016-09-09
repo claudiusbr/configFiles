@@ -1,8 +1,7 @@
-" use the man plugin to be able to see man pages in vim
-runtime! ftplugin/man.vim
-
 " set colorscheme
-colorscheme evening
+colorscheme elflord
+hi Normal ctermbg=Blue ctermfg=White guifg=White guibg=grey20
+
 
 " set the cursor line under the cursor
 set cursorline
