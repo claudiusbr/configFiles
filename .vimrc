@@ -1,7 +1,5 @@
 " set colorscheme
 colorscheme elflord
-hi Normal ctermbg=Blue ctermfg=White guifg=White guibg=grey20
-
 
 " set the cursor line under the cursor
 set cursorline
