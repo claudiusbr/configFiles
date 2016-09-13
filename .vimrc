@@ -1,3 +1,32 @@
+" from usr_27.txt smartcase: If you have a pattern with at least one uppercase
+" character, the search becomes case sensitive.  The idea is that you didn't
+" have to type that uppercase character, so you must have done it because you
+" wanted case to match.  
+" set ignorecase and smartcase 
+set ignorecase smartcase
+
+" magic: when searching, some special characters need to be backslashed to
+" have their special meaning activated, and are interpreted literally if used
+" without a preceding '\'. Others are the opposite. E.g.:
+"
+" these are special characters without a backslash, and normal characters with
+" it:
+" 	  $	    matches end-of-line
+" 	  .	    matches any character
+" 	  *	    any number of the previous atom
+" 	  ~	    latest substitute string
+"
+" these characters are interpreted literally without the backslash, and have
+" special meaning if escaped with it:
+" 	  \(\)      grouping into an atom
+" 	  \|	    separating alternatives
+" 	  \a	    alphabetic character
+" 	  \\	    literal backslash
+" 	  \.	    literal dot
+" 	  \{	    literal '{'
+" 	  a	    literal 'a'
+set magic
+
 " set colorscheme
 colorscheme elflord
 
@@ -51,9 +80,6 @@ syntax enable
 
 "set line numbers 
 set number
-
-"set ignore case on search
-set ic
 
 "set highlight search
 set hls
