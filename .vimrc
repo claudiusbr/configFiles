@@ -114,3 +114,6 @@ autocmd FileType text setlocal textwidth=78
 	" single html opeining tag. It will copy the tag, close it and leave
 	" it open for editing;
 	let @h='yyp^a/ko	'	
+
+	" add a dash to the beginning of a line:
+	let @n='^i- j^'
