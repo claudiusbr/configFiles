@@ -115,5 +115,6 @@ autocmd FileType text setlocal textwidth=78
 	" it open for editing;
 	let @h='yyp^a/ko	'	
 
-	" add a dash to the beginning of a line:
-	let @n='^i- j^'
+	" add a dash to the beginning of a line, and a ; to the end
+	let @n='^i- A;j^'
+
