@@ -118,3 +118,5 @@ autocmd FileType text setlocal textwidth=78
 	" add a - to the beginning of a line, and a ; to the end
 	let @n='^i- A;j^'
 
+	" add a - to the beginning of a line, and a : to the end
+	let @m='^i- A:j^'
