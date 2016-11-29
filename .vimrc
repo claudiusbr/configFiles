@@ -121,6 +121,9 @@ autocmd FileType text setlocal textwidth=78
 	" add a - to the beginning of a line, and a : to the end
 	let @m='^i- A:j^'
 
+	" build an empty plot for the R class notes
+	let @p='0i		€kb|                                             yyppppppppppppppa_________________________________________kllllljhhhr_lr_lr_lr_kj'
+
 " mappings
 	" layout change for all the 'Slide #' in my notes
-	map @sli /^slide.[0-9]<CR>0gU$i##<space><esc>@i
+	map @sli /^slide.[0-9]<CR>0gU$i##<space><esc>@sli
