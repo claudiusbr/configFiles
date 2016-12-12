@@ -76,7 +76,7 @@ set nocompatible
 set backspace=indent,eol,start
 
 "enable syntax
-syntax enable
+syntax on
 
 "set line numbers 
 set number
@@ -95,6 +95,13 @@ set clipboard=unnamed
 
 "set linebreak
 set linebreak
+
+" added for vimwiki
+execute pathogen#infect()
+filetype plugin on
+
+" will this make soft tabs for python?
+filetype indent on 
 
 " set textwidth for text files
 autocmd FileType text setlocal textwidth=78
