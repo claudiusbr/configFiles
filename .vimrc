@@ -120,7 +120,7 @@ autocmd FileType text setlocal textwidth=78
 	" close an opening html tag. Run the macro on a line containing a
 	" single html opeining tag. It will copy the tag, close it and leave
 	" it open for editing;
-	let @h='yyp^a/ko	'	
+	let @h='yyp^a/ko'	
 
 	" add a - to the beginning of a line, and a ; to the end
 	let @n='^i- A;j^'
