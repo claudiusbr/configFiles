@@ -146,6 +146,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
+# change weird blue-on-green colorscheme for other-writable non sticky
+# format when using 'ls'
+export LS_COLORS=$(echo $LS_COLORS | sed -e 's/ow=34;42/ow=30;42/g')
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
