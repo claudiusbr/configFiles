@@ -1,3 +1,6 @@
+" setting encoding
+set encoding=utf-8
+
 " from usr_27.txt smartcase: If you have a pattern with at least one uppercase
 " character, the search becomes case sensitive.  The idea is that you didn't
 " have to type that uppercase character, so you must have done it because you
