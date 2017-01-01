@@ -1,3 +1,27 @@
+" setting encoding
+set encoding=utf-8
+
+" the next five 'set' are from:
+" http://stackoverflow.com/questions/1878974/redefine-tab-as-4-spaces
+"
+" The width of a TAB is set to 4.
+" Still it is a \t. It is just that Vim will interpret it to be having a width of 4.
+"set tabstop=4
+
+" Sets the number of columns for a TAB
+set softtabstop=4   
+
+" Indents will have a width of 4
+set shiftwidth=4   
+
+" Expand TABs to spaces
+set expandtab       
+
+" Enabling this will make the tab key (in insert mode) insert spaces or tabs
+" to go to the next indent of the next tabstop when the cursor is at the
+" beginning of a line (i.e. the only preceding characters are whitespace).
+set smarttab
+
 " from usr_27.txt smartcase: If you have a pattern with at least one uppercase
 " character, the search becomes case sensitive.  The idea is that you didn't
 " have to type that uppercase character, so you must have done it because you
