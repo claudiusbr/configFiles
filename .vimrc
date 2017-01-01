@@ -115,7 +115,7 @@ autocmd FileType text setlocal textwidth=78
 	let @c='0i" j'	
 
 	" insert pair of curly brackets
-	let @b='A {}O	'	
+	let @b='A {}O'
 
 	" close an opening html tag. Run the macro on a line containing a
 	" single html opeining tag. It will copy the tag, close it and leave
