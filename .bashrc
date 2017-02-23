@@ -201,3 +201,9 @@ _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
 if [ -e ${HOME}/.bash_profile ]; then
     . ${HOME}/.bash_profile;
 fi
+
+#SDKMAN is tool for managing parallel versions of sdk's
+#I have not used it yet, but added it for Groovy, I think.
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
