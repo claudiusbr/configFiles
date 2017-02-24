@@ -197,10 +197,21 @@ VISUAL=vim
 PAGER=vim
 _byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
 
-## include .bash_profile for local changes
-if [ -e ${HOME}/.bash_profile ]; then
-    . ${HOME}/.bash_profile;
+## include .bash_local for local changes
+if [ -e ${HOME}/.bash_local ]; then
+    . ${HOME}/.bash_local;
 fi
+
+# Set PATH so it includes user's private bin if it exists
+if [ -d "${HOME}/bin" ] ; then
+  PATH="${HOME}/bin:${PATH}"
+fi
+
+# Set CLASSPATH to include local dir and 
+if [ -n "$CLASSPATH" ]; then
+    export CLASSPATH="$CLASSPATH:"
+fi
+export CLASSPATH="$CLASSPATH$HOME/lib:."
 
 #SDKMAN is tool for managing parallel versions of sdk's
 #I have not used it yet, but added it for Groovy, I think.
