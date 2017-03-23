@@ -9,10 +9,10 @@ set encoding=utf-8
 "set tabstop=4
 
 " Sets the number of columns for a TAB
-set softtabstop=4   
+set softtabstop=2   
 
 " Indents will have a width of 4
-set shiftwidth=4   
+set shiftwidth=2   
 
 " Expand TABs to spaces
 set expandtab       
