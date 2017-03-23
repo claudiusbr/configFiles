@@ -207,11 +207,16 @@ if [ -d "${HOME}/bin" ] ; then
   PATH="${HOME}/bin:${PATH}"
 fi
 
-# Set CLASSPATH to include local dir and 
+# Set CLASSPATH to include local dir
 if [ -n "$CLASSPATH" ]; then
-    export CLASSPATH="$CLASSPATH:"
+    export CLASSPATH="$CLASSPATH:";
 fi
 export CLASSPATH="$CLASSPATH$HOME/lib:."
+
+# Set `rename' to be the downloaded one
+if [ -e "${HOME}/bin/rename" ] ; then
+    alias rename="${HOME}/bin/rename";
+fi
 
 #SDKMAN is tool for managing parallel versions of sdk's
 #I have not used it yet, but added it for Groovy, I think.
