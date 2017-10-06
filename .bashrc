@@ -218,8 +218,3 @@ if [ -e "${HOME}/bin/rename" ] ; then
     alias rename="${HOME}/bin/rename";
 fi
 
-#SDKMAN is tool for managing parallel versions of sdk's
-#I have not used it yet, but added it for Groovy, I think.
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
