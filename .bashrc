@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    cygwin|xterm-color|*-256color|screen) color_prompt=yes;;
+    cygwin|xterm-color|*-256color|screen|xterm) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
