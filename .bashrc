@@ -207,6 +207,10 @@ if [ -d "${HOME}/bin" ] ; then
   PATH="${HOME}/bin:${PATH}"
 fi
 
+if [ -d "${HOME}/.local/bin" ] ; then
+  PATH="${HOME}/.local/bin:${PATH}"
+fi
+
 # Set CLASSPATH to include local dir
 if [ -n "$CLASSPATH" ]; then
     export CLASSPATH="$CLASSPATH:";
@@ -217,4 +221,3 @@ export CLASSPATH="$CLASSPATH$HOME/lib:."
 if [ -e "${HOME}/bin/rename" ] ; then
     alias rename="${HOME}/bin/rename";
 fi
-
