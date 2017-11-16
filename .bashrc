@@ -37,7 +37,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    cygwin|xterm-color|*-256color|screen) color_prompt=yes;;
+    cygwin|xterm-color|*-256color|screen|xterm) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -218,8 +218,3 @@ if [ -e "${HOME}/bin/rename" ] ; then
     alias rename="${HOME}/bin/rename";
 fi
 
-#SDKMAN is tool for managing parallel versions of sdk's
-#I have not used it yet, but added it for Groovy, I think.
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
