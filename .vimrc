@@ -52,7 +52,8 @@ set ignorecase smartcase
 set magic
 
 " set colorscheme
-colorscheme ron
+colorscheme ron " good with gnome equilux
+"colorscheme slate " another good one with gnome equilux
 
 " set the cursor line under the cursor
 set cursorline
