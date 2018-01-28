@@ -52,7 +52,7 @@ set ignorecase smartcase
 set magic
 
 " set colorscheme
-colorscheme elflord
+colorscheme ron
 
 " set the cursor line under the cursor
 set cursorline
