@@ -195,12 +195,33 @@ set -o vi
 EDITOR=vim
 VISUAL=vim
 PAGER=vim
-_byobu_sourced=1 . /usr/bin/byobu-launch 2>/dev/null || true
 
 ## include .bash_local for local changes
 if [ -e ${HOME}/.bash_local ]; then
     . ${HOME}/.bash_local;
 fi
+
+# workaround to remove ip address from byobu window title
+# inspired by: 
+# https://askubuntu.com/questions/606199/how-do-i-modify-the-terminal-title-set-by-byobu#607084
+if [ ! -z $(command -v byobu) ]; then
+  #echo "found byobu..."
+  if [ ! -z $(command -v wmctrl) ]; then
+    #echo "found wmctrl..."
+    #echo "output from wmctrl $(wmctrl -lx | grep -i 'gnome-terminal.\+'"$HOSTNAME"'.\+byobu' | cut -d' ' -f1)"
+    BYOBU_WINDOW_PID=$(wmctrl -lx | grep -i 'gnome-terminal.\+'"$HOSTNAME"'.\+byobu' | cut -d' ' -f1)
+    #echo "found byobu wmctrl ID: $BYOBU_WINDOW_PID"
+    sleep 0.5
+    #echo "slept for 0.5"
+    wmctrl -ir "$BYOBU_WINDOW_PID" -N "terminal" 
+    #echo "just passed the terminal change title bit"
+  else
+    echo -e "\nUnable to change window title -- please install 'wmctrl'" 1>&2
+  fi
+else
+  #echo -e "\nBYOBU NOT FOUND HAAAAAAA\n"
+fi
+
 
 # Set PATH so it includes user's private bin if it exists
 if [ -d "${HOME}/bin" ] ; then
@@ -221,3 +242,7 @@ export CLASSPATH="$CLASSPATH$HOME/lib:."
 if [ -e "${HOME}/bin/rename" ] ; then
     alias rename="${HOME}/bin/rename";
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/cbrasil/.sdkman"
+[[ -s "/home/cbrasil/.sdkman/bin/sdkman-init.sh" ]] && source "/home/cbrasil/.sdkman/bin/sdkman-init.sh"
