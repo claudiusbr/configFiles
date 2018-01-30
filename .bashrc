@@ -218,8 +218,6 @@ if [ ! -z $(command -v byobu) ]; then
   else
     echo -e "\nUnable to change window title -- please install 'wmctrl'" 1>&2
   fi
-else
-  #echo -e "\nBYOBU NOT FOUND HAAAAAAA\n"
 fi
 
 
