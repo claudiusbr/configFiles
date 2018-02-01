@@ -213,7 +213,8 @@ if [ ! -z $(command -v byobu) ]; then
     #echo "found byobu wmctrl ID: $BYOBU_WINDOW_PID"
     sleep 0.5
     #echo "slept for 0.5"
-    wmctrl -ir "$BYOBU_WINDOW_PID" -N "terminal" 
+    echo $BYOBU_WINDOW_PID
+    wmctrl -ir "$BYOBU_WINDOW_PID" -N "terminal" 2>/dev/null
     #echo "just passed the terminal change title bit"
   else
     echo -e "\nUnable to change window title -- please install 'wmctrl'" 1>&2
