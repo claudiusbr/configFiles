@@ -205,17 +205,14 @@ fi
 # inspired by: 
 # https://askubuntu.com/questions/606199/how-do-i-modify-the-terminal-title-set-by-byobu#607084
 if [ ! -z $(command -v byobu) ]; then
-  #echo "found byobu..."
   if [ ! -z $(command -v wmctrl) ]; then
-    #echo "found wmctrl..."
-    #echo "output from wmctrl $(wmctrl -lx | grep -i 'gnome-terminal.\+'"$HOSTNAME"'.\+byobu' | cut -d' ' -f1)"
     BYOBU_WINDOW_PID=$(wmctrl -lx | grep -i 'gnome-terminal.\+'"$HOSTNAME"'.\+byobu' | cut -d' ' -f1)
-    #echo "found byobu wmctrl ID: $BYOBU_WINDOW_PID"
-    sleep 0.5
-    #echo "slept for 0.5"
-    echo $BYOBU_WINDOW_PID
-    wmctrl -ir "$BYOBU_WINDOW_PID" -N "terminal" 2>/dev/null
-    #echo "just passed the terminal change title bit"
+    if [ ! -z $BYOBU_WINDOW_PID]; then
+      sleep 0.5
+      wmctrl -ir "$BYOBU_WINDOW_PID" -N "terminal" 2>/dev/null
+    else
+      echo "Byobu welcomes you!"
+    fi
   else
     echo -e "\nUnable to change window title -- please install 'wmctrl'" 1>&2
   fi
