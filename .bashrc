@@ -207,7 +207,7 @@ fi
 if [ ! -z $(command -v byobu) ]; then
   if [ ! -z $(command -v wmctrl) ]; then
     BYOBU_WINDOW_PID=$(wmctrl -lx | grep -i 'gnome-terminal.\+'"$HOSTNAME"'.\+byobu' | cut -d' ' -f1)
-    if [ ! -z $BYOBU_WINDOW_PID]; then
+    if [ ! -z $BYOBU_WINDOW_PID ]; then
       sleep 0.5
       wmctrl -ir "$BYOBU_WINDOW_PID" -N "terminal" 2>/dev/null
     else
