@@ -238,7 +238,3 @@ export CLASSPATH="$CLASSPATH$HOME/lib:."
 if [ -e "${HOME}/bin/rename" ] ; then
     alias rename="${HOME}/bin/rename";
 fi
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/cbrasil/.sdkman"
-[[ -s "/home/cbrasil/.sdkman/bin/sdkman-init.sh" ]] && source "/home/cbrasil/.sdkman/bin/sdkman-init.sh"
