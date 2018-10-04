@@ -1,0 +1,8 @@
+alias k='kubectl'
+
+. <(kubectl completion bash | sed s/kubectl/k/g)  # k alias completion
+
+
+alias kgc='kubectl config get-contexts'
+
+alias kuc='kubectl config use-context'
